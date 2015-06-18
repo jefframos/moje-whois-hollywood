@@ -1,0 +1,30 @@
+{
+	"pokemons":[
+		{"id":"1","name":"Taylor Swift","url":"img/popstars/0000_Taylor-Swift.jpg"},
+		{"id":"1","name":"Sia","url":"img/popstars/0001_sia.jpg"},
+		{"id":"1","name":"Shakira","url":"img/popstars/0002_Shakira.jpg"},
+		{"id":"1","name":"Selena Gomez","url":"img/popstars/0003_selena.jpg"},
+		{"id":"1","name":"Rita Ora","url":"img/popstars/0004_rita-ora.jpg"},
+		{"id":"1","name":"Rihanna","url":"img/popstars/0005_rihanna.jpg"},
+		{"id":"1","name":"Nicki Minaj","url":"img/popstars/0006_nicki_minaj.jpg"},
+		{"id":"1","name":"Miley Cyrus","url":"img/popstars/0007_miley.jpg"},
+		{"id":"1","name":"Meghan Trainor","url":"img/popstars/0008_meghan_trainor.jpg"},
+		{"id":"1","name":"Mariah Carey","url":"img/popstars/0009_mariahcarey.jpg"},
+		{"id":"1","name":"Madonna","url":"img/popstars/0010_Madonna.jpg"},
+		{"id":"1","name":"Lorde","url":"img/popstars/0011_Lorde.jpg"},
+		{"id":"1","name":"Lana Del Rey","url":"img/popstars/0012_Lana-Del-Rey.jpg"},
+		{"id":"1","name":"Lady Gaga","url":"img/popstars/0013_lady-gaga.jpg"},
+		{"id":"1","name":"Katy Perry","url":"img/popstars/0014_katy.jpg"},
+		{"id":"1","name":"Jessie J","url":"img/popstars/0015_jessiej.jpg"},
+		{"id":"1","name":"Jennifer Lopez","url":"img/popstars/0016_jeniffer_lopez.jpg"},
+		{"id":"1","name":"Ellie Goulding","url":"img/popstars/0017_ellie_g.jpg"},
+		{"id":"1","name":"Demi Lovato","url":"img/popstars/0018_Demi-Lovato.jpg"},
+		{"id":"1","name":"Christina Aguilera","url":"img/popstars/0019_Christina-Aguilera.jpg"},
+		{"id":"1","name":"Carly Rae Jepsen","url":"img/popstars/0020_carly-rae-jepsen.jpg"},
+		{"id":"1","name":"Britney Spears","url":"img/popstars/0021_britney_spears.jpg"},
+		{"id":"1","name":"Beyonce","url":"img/popstars/0022_beyonce.jpg"},
+		{"id":"1","name":"Avril Lavigne","url":"img/popstars/0023_avril.jpg"},
+		{"id":"1","name":"Ariana Grande","url":"img/popstars/0024_Ariana-Grande.jpg"},
+		{"id":"1","name":"Adele","url":"img/popstars/0025_Adele.jpg"}
+	]
+}
