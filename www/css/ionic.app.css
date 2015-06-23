@@ -110,10 +110,10 @@ body {
 
 .pane {
 
-	background: -webkit-linear-gradient(#46C7B5,#5BA2B4, #8470B3); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#46C7B5,#5BA2B4, #8470B3); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#46C7B5,#5BA2B4, #8470B3); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#46C7B5,#5BA2B4, #8470B3); /* Standard syntax */
+	background: -webkit-linear-gradient(#0cd1e9,#85d4a7, #ffd669); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#0cd1e9,#85d4a7, #ffd669); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#0cd1e9,#85d4a7, #ffd669); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#0cd1e9,#85d4a7, #ffd669); /* Standard syntax */
 }
 
 .card {
@@ -451,13 +451,13 @@ body {
 	margin-left: -5%;
 }
 .logo{
-	height: 70%;
-	margin: 0px auto 0px!important;
+	max-width: 100%;
+	margin: auto!important;
 	position: absolute;
 	left: 0;
 	right: 0;
-	bottom: 240px;
-	display: block;
+	/*bottom: 440px;*/
+	/*display: block;*/
 }
 .button-more-init{
 	text-transform: uppercase;
@@ -470,7 +470,7 @@ body {
 	right: 0;
 	bottom: 220px;
 	font-family: 'brandon_grotesquelight' !important;
-	color: #ffe552 !important;
+	color: #0cd1e9 !important;
 	font-size: 18px !important;
 	line-height: 47px !important;
 	text-align: center;
