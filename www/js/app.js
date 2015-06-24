@@ -93,7 +93,14 @@ app.controller('DataController', ['$scope', 'JsonReaderService', function ($scop
 	$scope.gameStatus = 0;
 	$scope.currentResult = '-';
 	$scope.rounds = [0,0,0,0];
-	$scope.results = ['Not so good', 'Almost good' , 'Good', 'Awesome' , 'Expert Celebrity Blogger'];
+	$scope.results = ['Casual Music Listener!','Biggest Fan!','Celebrity Expert!'];
+	$scope.resultsDesc = ['You love music, and you don’t care about the popstars behind it.'+
+	'You care about the songs itself, and you might have one or two popstars you really know and love!',
+	'You know all the words to the top songs, and you are crazy about some of these popstars!'+
+	'You are not on top of every artist out there, but you are definitely a loyal fan to those you like!' ,
+	'You know how to match the names with the famous faces!'+
+	'It’s no surprise, because you love to listen to music.'+
+	'You love to know more about the popstars behind the music!'];
 	$scope.preloadSrc = [];
 	$scope.isPause = false;
 
@@ -374,8 +381,12 @@ app.controller('DataController', ['$scope', 'JsonReaderService', function ($scop
 		var idResult = 0;
 		// $scope.results
 		console.log($scope.points, $scope.rounds.length, $scope.results[Math.floor(temp * $scope.results.length)]);
+		// $scope.finalResult = $scope.points+' / '+$scope.rounds.length;
+		// $scope.points = $scope.results[Math.floor(temp * $scope.results.length)];
+
 		$scope.finalResult = $scope.points+' / '+$scope.rounds.length;
-		$scope.points = $scope.results[Math.floor(temp * $scope.results.length)];
+		$scope.resultTitle = $scope.results[Math.floor(temp * ($scope.results.length-1))];
+		$scope.resultDesc = $scope.resultsDesc[Math.floor(temp * ($scope.resultsDesc.length-1))];
 		// if($scope.scores[$scope.currentGens[0]] < $scope.points){
 		// 	$scope.scores[$scope.currentGens[0]] = $scope.points;
 		// 	$scope.newHigh = true;
