@@ -77,7 +77,7 @@ body {
 	top: 50%; }
 
 .radial {
-	background: url(../img/radial.png) no-repeat transparent !important;
+	/*background: url(../img/radial.png) no-repeat transparent !important;*/
 	background-position: top center !important;
 	height: 100%;
 }
@@ -110,10 +110,14 @@ body {
 
 .pane {
 
-	background: -webkit-linear-gradient(#0cd1e9,#85d4a7, #ffd669); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#0cd1e9,#85d4a7, #ffd669); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#0cd1e9,#85d4a7, #ffd669); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#0cd1e9,#85d4a7, #ffd669); /* Standard syntax */
+	background: -webkit-linear-gradient(#fdd784,#eb7c7d, #ca0829); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#fdd784,#eb7c7d, #ca0829); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#fdd784,#eb7c7d, #ca0829); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#fdd784,#eb7c7d, #ca0829); /* Standard syntax */
+}
+
+.pane-ie {
+	background-color: #eb7c7d!important; /* For Safari 5.1 to 6.0 */
 }
 
 .card {
@@ -226,7 +230,7 @@ body {
 	right: 0;
 	width: 266px;
 	height: 6px;
-	background: #03C4A9;
+	background: #e75267;
 	border-radius: 3px;
 	margin: 2px;
 	transform-origin:center center;
@@ -480,7 +484,7 @@ body {
 	right: 0;
 	bottom: 220px;
 	font-family: 'brandon_grotesquelight' !important;
-	color: #0cd1e9 !important;
+	color: #fdd784 !important;
 	font-size: 18px !important;
 	line-height: 47px !important;
 	text-align: center;
@@ -525,13 +529,13 @@ body {
 	border-radius: 25px!important;
 	background-color: #f6f4f7 !important;
 	font-family: 'brandon_grotesquelight' !important;
-	color: #4cbbb5 !important;
+	color: #cc0829 !important;
 	font-size: 20px !important;
 	line-height: 47px !important;
 	border:none!important;
 }
 .button-play-init:hover{
-	background-color: #ddfcfb !important;
+	background-color: #f2e3c6 !important;
 	-webkit-transition: background-color 250ms linear;
 	-moz-transition: background-color 250ms linear;
 	-o-transition: background-color 250ms linear;
@@ -642,14 +646,14 @@ span {
 	box-shadow: 0 1px 0 #ddd6de !important;
 	margin: 0 0 1px !important;
 	font-family: 'brandon_grotesquelight' !important;
-	color: #8470b5 !important;
+	color: #ca0829 !important;
 	font-size: 20px !important;
 	line-height: 40px !important;
 	position: relative;
 	border-radius: 0px!important;
 	border: 0 !important;}
 	.button-question:hover{
-		background-color: #efdff7 !important;
+		background-color: #f2e3c6 !important;
 		-webkit-transition: background-color 250ms linear;
 		-moz-transition: background-color 250ms linear;
 		-o-transition: background-color 250ms linear;

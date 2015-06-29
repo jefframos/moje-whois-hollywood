@@ -82,7 +82,8 @@
 							<div class="end-game-modal">
 								<h3>{{finalResult}}</h3>
 								<h1>You are</h1>
-								<h2>{{points}}</h2>
+								<h2>{{resultTitle}}</h2>
+								<h4>{{resultDesc}}</h4>
 								<button class="button button-clear red-back-ico stop" ng-click="backToInit()"></button>
 								<button class="button button-clear red-refresh-ico restart" ng-click="restart()"></button>
 							</div>
@@ -94,8 +95,9 @@
 
 		<script type="text/javascript">
 			setTimeout(function(){
+				document.querySelectorAll('.pane')[0].classList.add('pane-ie');
 				var SpilData = {
-					id: '576742227280295360' // Replace with the value you receive from Spil Games
+					id: '576742227280295406' // Replace with the value you receive from Spil Games
 				};
 
 				GameAPI.loadAPI (function (apiInstance) {

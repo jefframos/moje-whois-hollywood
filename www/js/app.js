@@ -74,6 +74,28 @@ app.directive('imageonload', function() {
 });
 
 app.controller('DataController', ['$scope', 'JsonReaderService', function ($scope, JsonReaderService) {
+	var arr1 = [{id:1},{id:2},{id:3},{id:4},{id:5}];
+	var arr2 = [{id:1},{id:2},{id:3},{id:42},{id:5}];
+
+
+	function difference(array1, array2){
+		var diff = [];
+		var has = false;
+		for (var i = 0; i < array1.length; i++) {
+			has = false;
+			for (var j = 0; j < array2.length; j++) {
+				if(array2[j].id === array1[i].id)
+				{
+					has = true;
+				}
+			};
+			if(!has){
+				diff.push(array1[i]);
+			}
+		};
+		return diff;
+	}
+	console.log('diff', difference(arr2, arr1));
 	$scope.pokemons = [];
 	$scope.currentQuestion = {};
 	$scope.darked = true;
