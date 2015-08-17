@@ -23,6 +23,25 @@
 
 		<!-- your app's js -->
 		<script src="js/app.js"></script>
+		<style type="text/css">
+			.land{
+				display: none;
+			}
+			@media (orientation: landscape) {
+				.pane {
+					display: none;
+				}
+				.land{
+					background: url('img/orientation.png') no-repeat center center #CD122F;
+					width: 100%;
+					height: 100%;
+					display: inherit;
+				}
+				body{
+					background-color: #CD122F;
+				}
+			}
+		</style>
 	</head>
 	<body ng-app="starter">
 		<div class="wrapper">
@@ -101,7 +120,7 @@
 				};
 
 				GameAPI.loadAPI (function (apiInstance) {
-					console.log(apiInstance)
+					// console.log(apiInstance)
 
 					// adds a more games button to the screen
 			        var buttonProperties = apiInstance.Branding.getLink('more_games');
@@ -111,8 +130,11 @@
 
 			        // assign the outgoing click
 			        link.href = "javascript:void(0);";
-			        link.onclick = buttonProperties.action;
-			        link.ontouchend = buttonProperties.action;
+			        if(detectmob()){
+				        link.ontouchend = buttonProperties.action;
+				    }else{
+				        link.onclick = buttonProperties.action;
+				    }
 			        link.setAttribute("id", "spilgames-more-games-btn");
 			        link.innerHTML = "More Games";
 			        // Other functions you can use of the Spil Game API have been removed in this code example
@@ -126,16 +148,39 @@
 			            var logo = document.createElement('img');
 			            logo.src = logoData.image;
 			            if (logo.addEventListener) {
-			                logo.addEventListener('click', logoData.action);
-			                logo.addEventListener('touchend', logoData.action);
+			            	if(detectmob()){
+			                	logo.addEventListener('touchend', logoData.action);
+			            	}
+			                else{
+			                	logo.addEventListener('click', logoData.action);
+			                }
 			            } else if (logo.attachEvent) {
-			                logo.attachEvent('click', logoData.action);
-			                logo.attachEvent('touchend', logoData.action);
+			            	if(detectmob()){
+			                	logo.attachEvent('touchend', logoData.action);
+			            	}
+			            	else{
+			                	logo.attachEvent('click', logoData.action);
+			            	}
 			            }
 			            logo.className += " spilgames-branding-image";
 			            document.body.appendChild(logo);
 			        }
 
+			        function detectmob() {
+						if(navigator.userAgent.match(/Android/i)
+							||navigator.userAgent.match(/webOS/i)
+							||navigator.userAgent.match(/iPhone/i)
+							||navigator.userAgent.match(/iPad/i)
+							||navigator.userAgent.match(/iPod/i)
+							||navigator.userAgent.match(/BlackBerry/i)
+							||navigator.userAgent.match(/Windows Phone/i)
+						){
+							return true;
+						}
+						else{
+							return false;
+						}
+					}
 			        apiInstance.Branding.displaySplashScreen(function(){
                 //APP.initApplication();
             		});
@@ -154,6 +199,7 @@
 					//     }
 					// }
 					// GameAPI.GameBreak.request(pauseGame, resumeGame);
+
 
 				}, SpilData)
 			},100);

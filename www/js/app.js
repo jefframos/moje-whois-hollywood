@@ -58,7 +58,7 @@ app.directive('imageonload', function() {
         restrict: 'A',
         link: function(scope, element) {
           element.on('load', function() {
-          	console.log('imgloaded')
+          	// console.log('imgloaded')
             // Set visibility: true + remove spinner overlay
               element.removeClass('spinner-hide');
               element.addClass('spinner-show');
@@ -95,7 +95,7 @@ app.controller('DataController', ['$scope', 'JsonReaderService', function ($scop
 		};
 		return diff;
 	}
-	console.log('diff', difference(arr2, arr1));
+	// console.log('diff', difference(arr2, arr1));
 	$scope.pokemons = [];
 	$scope.currentQuestion = {};
 	$scope.darked = true;
@@ -115,14 +115,26 @@ app.controller('DataController', ['$scope', 'JsonReaderService', function ($scop
 	$scope.gameStatus = 0;
 	$scope.currentResult = '-';
 	$scope.rounds = [0,0,0,0];
-	$scope.results = ['Casual Music Listener!','Biggest Fan!','Celebrity Expert!'];
-	$scope.resultsDesc = ['You love music, and you don’t care about the popstars behind it.'+
-	'You care about the songs itself, and you might have one or two popstars you really know and love!',
-	'You know all the words to the top songs, and you are crazy about some of these popstars!'+
-	'You are not on top of every artist out there, but you are definitely a loyal fan to those you like!' ,
-	'You know how to match the names with the famous faces!'+
-	'It’s no surprise, because you love to listen to music.'+
-	'You love to know more about the popstars behind the music!'];
+	$scope.results = ['Trendy movie watcher','Movie Theater gal','Oscar Winner'];
+	$scope.resultsDesc = [
+
+"All you know about movies and its celebrities, is what you read online or on the magazines."+
+"You only go see the biggest movies of the year, and still you're quite picky."+
+"You prefer to spend your time differently than watching movies.",
+
+	'A fun night out to watch a movie is definitely on your list from time to time.'+
+	"You might not know all the ins and outs, but you don't care as well."+
+	"You care about the experience when watching the movie, whether it's comedy, action, drama, or horror.",
+
+
+	'You are the friend that knows all about movies and its stars, and you love it!'+
+	'Watching movies is one of your favorite activities, and because of this, you also know many of the famous stars. '+
+	'You know details about behind the scenes, and always impress your friends with facts and updates.'+
+	'Astrid Huntjens: this is the best one!'];
+
+
+
+
 	$scope.preloadSrc = [];
 	$scope.isPause = false;
 
@@ -178,7 +190,7 @@ app.controller('DataController', ['$scope', 'JsonReaderService', function ($scop
 		if(newTotHighs > totHighs){
 			$scope.unlock = true;
 		}
-		console.log(totHighs, newTotHighs);
+		// console.log(totHighs, newTotHighs);
 	}
 	$scope.updateHighscore();
 
@@ -211,7 +223,7 @@ app.controller('DataController', ['$scope', 'JsonReaderService', function ($scop
 	$scope.randomQuestion = function() {
 
 		$scope.time = $scope.maxTime;
-		$scope.resultAnsware = 'Who is?';
+		$scope.resultAnsware = 'Who is She?';
 		$scope.currentResult = '-';
 		$scope.block = false;
 		$scope.darked = true;
@@ -236,7 +248,7 @@ app.controller('DataController', ['$scope', 'JsonReaderService', function ($scop
 						pass = false;
 						break;
 					}
-					console.log(tempName, $scope.currentQuestion.options[i])
+					// console.log(tempName, $scope.currentQuestion.options[i])
 				}
 				if(pass){
 					$scope.currentQuestion.options.push(tempName);
@@ -364,7 +376,7 @@ app.controller('DataController', ['$scope', 'JsonReaderService', function ($scop
 			var currentPokemon = $scope.globalIds[i] - 1;
 			$scope.preloadSrc.push($scope.pokemons[currentPokemon].url);
 		}
-		console.log($scope.preloadSrc)
+		// console.log($scope.preloadSrc)
 		$scope.randomQuestion();
 		$scope.currentRound = 0;
 	}
@@ -402,7 +414,7 @@ app.controller('DataController', ['$scope', 'JsonReaderService', function ($scop
 		var temp = $scope.points/$scope.rounds.length;
 		var idResult = 0;
 		// $scope.results
-		console.log($scope.points, $scope.rounds.length, $scope.results[Math.floor(temp * $scope.results.length)]);
+		// console.log($scope.points, $scope.rounds.length, $scope.results[Math.floor(temp * $scope.results.length)]);
 		// $scope.finalResult = $scope.points+' / '+$scope.rounds.length;
 		// $scope.points = $scope.results[Math.floor(temp * $scope.results.length)];
 

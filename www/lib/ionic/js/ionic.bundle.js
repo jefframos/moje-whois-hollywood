@@ -2487,7 +2487,7 @@ window.ionic.version = '1.0.0';
     try{
       isWebkit = ionic.CSS.TRANSITION.indexOf('webkit') > -1;
     }catch(e){
-      console.log(e);
+      // console.log(e);
     }
 
     // transition duration
