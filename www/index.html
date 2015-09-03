@@ -32,7 +32,7 @@
 					display: none;
 				}
 				.land{
-					background: url('img/orientation.png') no-repeat center center #CD122F;
+					background: url('img/orientation.png') no-repeat center center;
 					width: 100%;
 					height: 100%;
 					display: inherit;
@@ -45,8 +45,9 @@
 	</head>
 	<body ng-app="starter">
 		<div class="wrapper">
+		<div class="land"></div>
 			<ion-pane>
-				<ion-content>
+				<ion-content scroll="false">
 					<div class="radial" ng-controller="DataController">
 						<div class="cache-images" ng-repeat="tempURL in preloadSrc">
 							<img ng-src="{{ tempURL }}">
